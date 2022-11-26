@@ -6,6 +6,8 @@
 package latihan4_maulana_5e;
 
 import java.awt.CardLayout;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
 
 /**
  *
@@ -40,6 +42,7 @@ public class PenampilGambarFulscreen extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         Gbr1Btn.setText("Gambar 1");
         Gbr1Btn.addActionListener(new java.awt.event.ActionListener() {
@@ -122,6 +125,18 @@ public class PenampilGambarFulscreen extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                
+                PenampilGambarButton fullFrame = new PenampilGambarButton();
+                
+                GraphicsDevice device =
+                        GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+                device.setFullScreenWindow(fullFrame);
+                
+                fullFrame.setVisible(true);
+            }
+        });
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -147,6 +162,13 @@ public class PenampilGambarFulscreen extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
+                PenampilGambarButton fullFrame = new PenampilGambarButton();
+                
+                GraphicsDevice device =
+                        GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+                device.setFullScreenWindow(fullFrame);
+                
                 new PenampilGambarFulscreen().setVisible(true);
             }
         });
