@@ -5,6 +5,8 @@
  */
 package latihan4_maulana_5e;
 
+import java.awt.CardLayout;
+
 /**
  *
  * @author user
@@ -40,12 +42,27 @@ public class PenampilGambarButton extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Gbr1Btn.setText("Gambar 1");
+        Gbr1Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Gbr1BtnActionPerformed(evt);
+            }
+        });
         ButtonPanel.add(Gbr1Btn);
 
         Gbr2Btn.setText("Gambar 2");
+        Gbr2Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Gbr2BtnActionPerformed(evt);
+            }
+        });
         ButtonPanel.add(Gbr2Btn);
 
         Gbr3Btn.setText("Gambar 3");
+        Gbr3Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Gbr3BtnActionPerformed(evt);
+            }
+        });
         ButtonPanel.add(Gbr3Btn);
 
         ExitBtn.setText("Exit");
@@ -61,11 +78,9 @@ public class PenampilGambarButton extends javax.swing.JFrame {
         ImagePanel.setLayout(new java.awt.CardLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar1.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
         ImagePanel.add(jLabel1, "1");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar2.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
         ImagePanel.add(jLabel2, "2");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar3.png"))); // NOI18N
@@ -78,7 +93,26 @@ public class PenampilGambarButton extends javax.swing.JFrame {
 
     private void ExitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBtnActionPerformed
         // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_ExitBtnActionPerformed
+
+    private void Gbr1BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Gbr1BtnActionPerformed
+        // TODO add your handling code here:
+        CardLayout c1 = (CardLayout) (ImagePanel.getLayout());
+        c1.show(ImagePanel, "1");
+    }//GEN-LAST:event_Gbr1BtnActionPerformed
+
+    private void Gbr2BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Gbr2BtnActionPerformed
+        // TODO add your handling code here:
+        CardLayout c1 = (CardLayout) (ImagePanel.getLayout());
+        c1.show(ImagePanel, "2");
+    }//GEN-LAST:event_Gbr2BtnActionPerformed
+
+    private void Gbr3BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Gbr3BtnActionPerformed
+        // TODO add your handling code here:
+        CardLayout c1 = (CardLayout) (ImagePanel.getLayout());
+        c1.show(ImagePanel, "3");
+    }//GEN-LAST:event_Gbr3BtnActionPerformed
 
     /**
      * @param args the command line arguments
