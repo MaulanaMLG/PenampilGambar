@@ -5,6 +5,8 @@
  */
 package latihan4_maulana_5e;
 
+import java.awt.CardLayout;
+
 /**
  *
  * @author user
@@ -68,6 +70,8 @@ public class PenamapilGambarComboBox extends javax.swing.JFrame {
 
     private void pilihanItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_pilihanItemStateChanged
         // TODO add your handling code here:
+        CardLayout c1 = (CardLayout) (ImagePanel.getLayout());
+        c1.show(ImagePanel, String.valueOf(pilihan.getSelectedIndex()));
     }//GEN-LAST:event_pilihanItemStateChanged
 
     /**
