@@ -5,6 +5,8 @@
  */
 package latihan4_maulana_5e;
 
+import java.awt.CardLayout;
+
 /**
  *
  * @author user
@@ -27,21 +29,93 @@ public class PenampilGambarFulscreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        ButtonPanel = new javax.swing.JPanel();
+        Gbr1Btn = new javax.swing.JButton();
+        Gbr2Btn = new javax.swing.JButton();
+        Gbr3Btn = new javax.swing.JButton();
+        ExitBtn = new javax.swing.JButton();
+        ImagePanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        Gbr1Btn.setText("Gambar 1");
+        Gbr1Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Gbr1BtnActionPerformed(evt);
+            }
+        });
+        ButtonPanel.add(Gbr1Btn);
+
+        Gbr2Btn.setText("Gambar 2");
+        Gbr2Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Gbr2BtnActionPerformed(evt);
+            }
+        });
+        ButtonPanel.add(Gbr2Btn);
+
+        Gbr3Btn.setText("Gambar 3");
+        Gbr3Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Gbr3BtnActionPerformed(evt);
+            }
+        });
+        ButtonPanel.add(Gbr3Btn);
+
+        ExitBtn.setText("Exit");
+        ExitBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitBtnActionPerformed(evt);
+            }
+        });
+        ButtonPanel.add(ExitBtn);
+
+        getContentPane().add(ButtonPanel, java.awt.BorderLayout.PAGE_START);
+
+        ImagePanel.setLayout(new java.awt.CardLayout());
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar4.png"))); // NOI18N
+        ImagePanel.add(jLabel1, "1");
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar5.png"))); // NOI18N
+        ImagePanel.add(jLabel2, "2");
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar6.png"))); // NOI18N
+        ImagePanel.add(jLabel3, "3");
+
+        getContentPane().add(ImagePanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Gbr1BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Gbr1BtnActionPerformed
+        // TODO add your handling code here:
+        CardLayout c1 = (CardLayout) (ImagePanel.getLayout());
+        c1.show(ImagePanel, "1");
+    }//GEN-LAST:event_Gbr1BtnActionPerformed
+
+    private void Gbr2BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Gbr2BtnActionPerformed
+        // TODO add your handling code here:
+        CardLayout c1 = (CardLayout) (ImagePanel.getLayout());
+        c1.show(ImagePanel, "2");
+    }//GEN-LAST:event_Gbr2BtnActionPerformed
+
+    private void Gbr3BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Gbr3BtnActionPerformed
+        // TODO add your handling code here:
+        CardLayout c1 = (CardLayout) (ImagePanel.getLayout());
+        c1.show(ImagePanel, "3");
+    }//GEN-LAST:event_Gbr3BtnActionPerformed
+
+    private void ExitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBtnActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_ExitBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +153,14 @@ public class PenampilGambarFulscreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel ButtonPanel;
+    private javax.swing.JButton ExitBtn;
+    private javax.swing.JButton Gbr1Btn;
+    private javax.swing.JButton Gbr2Btn;
+    private javax.swing.JButton Gbr3Btn;
+    private javax.swing.JPanel ImagePanel;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
