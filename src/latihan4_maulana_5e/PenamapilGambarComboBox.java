@@ -27,21 +27,48 @@ public class PenamapilGambarComboBox extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        CmbPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        pilihan = new javax.swing.JComboBox<>();
+        ImagePanel = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jLabel1.setText("Pilih Gambar");
+        CmbPanel.add(jLabel1);
+
+        pilihan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gambar 1", "Gambar 2", "Gambar 3", " " }));
+        pilihan.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                pilihanItemStateChanged(evt);
+            }
+        });
+        CmbPanel.add(pilihan);
+
+        getContentPane().add(CmbPanel, java.awt.BorderLayout.PAGE_START);
+
+        ImagePanel.setLayout(new java.awt.CardLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar3.png"))); // NOI18N
+        ImagePanel.add(jLabel2, "0");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar4.png"))); // NOI18N
+        ImagePanel.add(jLabel3, "1");
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar6.png"))); // NOI18N
+        ImagePanel.add(jLabel4, "2");
+
+        getContentPane().add(ImagePanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void pilihanItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_pilihanItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pilihanItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -79,5 +106,12 @@ public class PenamapilGambarComboBox extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel CmbPanel;
+    private javax.swing.JPanel ImagePanel;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JComboBox<String> pilihan;
     // End of variables declaration//GEN-END:variables
 }
