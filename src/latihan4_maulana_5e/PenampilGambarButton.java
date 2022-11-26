@@ -28,16 +28,57 @@ public class PenampilGambarButton extends javax.swing.JFrame {
     private void initComponents() {
 
         ButtonPanel = new javax.swing.JPanel();
+        Gbr1Btn = new javax.swing.JButton();
+        Gbr2Btn = new javax.swing.JButton();
+        Gbr3Btn = new javax.swing.JButton();
+        ExitBtn = new javax.swing.JButton();
         ImagePanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        Gbr1Btn.setText("Gambar 1");
+        ButtonPanel.add(Gbr1Btn);
+
+        Gbr2Btn.setText("Gambar 2");
+        ButtonPanel.add(Gbr2Btn);
+
+        Gbr3Btn.setText("Gambar 3");
+        ButtonPanel.add(Gbr3Btn);
+
+        ExitBtn.setText("Exit");
+        ExitBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitBtnActionPerformed(evt);
+            }
+        });
+        ButtonPanel.add(ExitBtn);
+
         getContentPane().add(ButtonPanel, java.awt.BorderLayout.PAGE_START);
 
         ImagePanel.setLayout(new java.awt.CardLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar1.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        ImagePanel.add(jLabel1, "1");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar2.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        ImagePanel.add(jLabel2, "2");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar3.png"))); // NOI18N
+        ImagePanel.add(jLabel3, "3");
+
         getContentPane().add(ImagePanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ExitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ExitBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -76,6 +117,13 @@ public class PenampilGambarButton extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ButtonPanel;
+    private javax.swing.JButton ExitBtn;
+    private javax.swing.JButton Gbr1Btn;
+    private javax.swing.JButton Gbr2Btn;
+    private javax.swing.JButton Gbr3Btn;
     private javax.swing.JPanel ImagePanel;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
