@@ -77,12 +77,15 @@ public class PenampilGambarButton extends javax.swing.JFrame {
 
         ImagePanel.setLayout(new java.awt.CardLayout());
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar1.png"))); // NOI18N
         ImagePanel.add(jLabel1, "1");
 
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar2.png"))); // NOI18N
         ImagePanel.add(jLabel2, "2");
 
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/latihan4_maulana_5e/Gambar3.png"))); // NOI18N
         ImagePanel.add(jLabel3, "3");
 
